@@ -1,0 +1,7 @@
+mymodule.form:
+    path: '/userqueryform'
+    defaults:
+     _form: '\Drupal\mymodule\Form\UserQueryForm'
+     _title: 'Query Form'
+    requirements:
+     _permission: 'access content'

@@ -1,0 +1,7 @@
+customlogin.form:
+ path: '/login'
+ defaults:
+   _title: 'User Login'
+   _form: '\Drupal\customlogin\Form\LoginForm'
+ requirements:
+   _permission: 'access content'

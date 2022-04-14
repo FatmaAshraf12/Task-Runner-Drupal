@@ -1,0 +1,29 @@
+task.form:
+ path: '/createtask'
+ defaults:
+   _title: 'Create Task'
+   _form: '\Drupal\task\Form\TaskForm'
+ requirements:
+   _permission: 'access content'
+   
+   
+   
+    
+cool:
+  path: '/projects'
+  defaults: 
+    _controller: '\Drupal\task\Controller\taskController::showProjectsPage'
+    _title: 'Projects'
+  requirements:
+    _permission: 'access content'
+
+
+
+
+project:
+  path: '/projectPage/{name}'
+  defaults: 
+    _controller: '\Drupal\task\Controller\taskController::showProjectPage'
+    _title: 'Project Tasks'
+  requirements:
+    _permission: 'access content'

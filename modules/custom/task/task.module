@@ -1,0 +1,30 @@
+<?php
+/*
+ * @file
+ * code for Task module
+*/
+
+/*
+class Task{
+    public $countWords;
+    public $countLines;
+    public $countCharcters;
+    
+    
+    public function count_words(){
+	   \Drupal::messenger()->addMessage('Count Words');
+        
+    }
+    
+    public function count_lines(){
+        	   \Drupal::messenger()->addMessage('Count Lines');
+
+        
+    }
+    
+    
+    public function count_character(){
+        	   \Drupal::messenger()->addMessage('Count Character');
+    }
+}*/
+?>
