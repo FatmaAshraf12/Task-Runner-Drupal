@@ -2002,3 +2002,96 @@
     [:db_insert_placeholder_7] => 2022-04-14 23:53:39
 )
 " at /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Database/Driver/mysql/ExceptionHandler.php line 50
+[15-Apr-2022 10:02:25 UTC] RuntimeException: Failed to start the session because headers have already been sent by "/home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Response.php" at line 1239. in /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php on line 152 #0 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(162): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#1 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(193): Drupal\Core\Session\SessionManager->startNow()
+#2 /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Session.php(191): Drupal\Core\Session\SessionManager->save()
+#3 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/Session.php(61): Symfony\Component\HttpFoundation\Session\Session->save()
+#4 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#5 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#6 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#7 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#8 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#9 /home/yourbeau/public_html/drupal0/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#10 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/DrupalKernel.php(708): Stack\StackedHttpKernel->handle()
+#11 /home/yourbeau/public_html/drupal0/index.php(19): Drupal\Core\DrupalKernel->handle()
+#12 {main}
+[15-Apr-2022 10:04:08 UTC] RuntimeException: Failed to start the session because headers have already been sent by "/home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Response.php" at line 1239. in /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php on line 152 #0 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(162): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#1 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(193): Drupal\Core\Session\SessionManager->startNow()
+#2 /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Session.php(191): Drupal\Core\Session\SessionManager->save()
+#3 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/Session.php(61): Symfony\Component\HttpFoundation\Session\Session->save()
+#4 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#5 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#6 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#7 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#8 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#9 /home/yourbeau/public_html/drupal0/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#10 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/DrupalKernel.php(708): Stack\StackedHttpKernel->handle()
+#11 /home/yourbeau/public_html/drupal0/index.php(19): Drupal\Core\DrupalKernel->handle()
+#12 {main}
+[15-Apr-2022 10:06:14 UTC] RuntimeException: Failed to start the session because headers have already been sent by "/home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Response.php" at line 1239. in /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php on line 152 #0 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(162): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#1 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(193): Drupal\Core\Session\SessionManager->startNow()
+#2 /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Session.php(191): Drupal\Core\Session\SessionManager->save()
+#3 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/Session.php(61): Symfony\Component\HttpFoundation\Session\Session->save()
+#4 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#5 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#6 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#7 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#8 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#9 /home/yourbeau/public_html/drupal0/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#10 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/DrupalKernel.php(708): Stack\StackedHttpKernel->handle()
+#11 /home/yourbeau/public_html/drupal0/index.php(19): Drupal\Core\DrupalKernel->handle()
+#12 {main}
+[15-Apr-2022 10:14:12 UTC] RuntimeException: Failed to start the session because headers have already been sent by "/home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Response.php" at line 1239. in /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php on line 152 #0 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(162): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#1 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Session/SessionManager.php(193): Drupal\Core\Session\SessionManager->startNow()
+#2 /home/yourbeau/public_html/drupal0/vendor/symfony/http-foundation/Session/Session.php(191): Drupal\Core\Session\SessionManager->save()
+#3 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/Session.php(61): Symfony\Component\HttpFoundation\Session\Session->save()
+#4 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#5 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#6 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#7 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#8 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#9 /home/yourbeau/public_html/drupal0/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#10 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/DrupalKernel.php(708): Stack\StackedHttpKernel->handle()
+#11 /home/yourbeau/public_html/drupal0/index.php(19): Drupal\Core\DrupalKernel->handle()
+#12 {main}
+[15-Apr-2022 12:34:05 Africa/Cairo] TypeError: feof(): Argument #1 ($stream) must be of type resource, bool given in /home/yourbeau/public_html/drupal0/modules/custom/task/src/Plugin/QueueWorker/TaskCreationBase.php on line 76 #0 /home/yourbeau/public_html/drupal0/modules/custom/task/src/Plugin/QueueWorker/TaskCreationBase.php(76): feof()
+#1 /home/yourbeau/public_html/drupal0/modules/custom/task/src/Plugin/QueueWorker/TaskCreationBase.php(111): Drupal\task\Plugin\QueueWorker\TaskCreationBase->count_character()
+#2 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Cron.php(182): Drupal\task\Plugin\QueueWorker\TaskCreationBase->processItem()
+#3 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Cron.php(147): Drupal\Core\Cron->processQueues()
+#4 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/ProxyClass/Cron.php(75): Drupal\Core\Cron->run()
+#5 /home/yourbeau/public_html/drupal0/core/modules/system/src/Form/CronForm.php(166): Drupal\Core\ProxyClass\Cron->run()
+#6 [internal function]: Drupal\system\Form\CronForm->runCron()
+#7 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Form/FormSubmitter.php(114): call_user_func_array()
+#8 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Form/FormSubmitter.php(52): Drupal\Core\Form\FormSubmitter->executeSubmitHandlers()
+#9 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Form/FormBuilder.php(592): Drupal\Core\Form\FormSubmitter->doSubmitForm()
+#10 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Form/FormBuilder.php(320): Drupal\Core\Form\FormBuilder->processForm()
+#11 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Controller/FormController.php(73): Drupal\Core\Form\FormBuilder->buildForm()
+#12 [internal function]: Drupal\Core\Controller\FormController->getContentResult()
+#13 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(123): call_user_func_array()
+#14 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Render/Renderer.php(564): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#15 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(124): Drupal\Core\Render\Renderer->executeInRenderContext()
+#16 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/EventSubscriber/EarlyRenderingControllerWrapperSubscriber.php(97): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->wrapControllerExecutionInRenderContext()
+#17 /home/yourbeau/public_html/drupal0/vendor/symfony/http-kernel/HttpKernel.php(158): Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber->Drupal\Core\EventSubscriber\{closure}()
+#18 /home/yourbeau/public_html/drupal0/vendor/symfony/http-kernel/HttpKernel.php(80): Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+#19 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/Session.php(58): Symfony\Component\HttpKernel\HttpKernel->handle()
+#20 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/KernelPreHandle.php(48): Drupal\Core\StackMiddleware\Session->handle()
+#21 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(106): Drupal\Core\StackMiddleware\KernelPreHandle->handle()
+#22 /home/yourbeau/public_html/drupal0/core/modules/page_cache/src/StackMiddleware/PageCache.php(85): Drupal\page_cache\StackMiddleware\PageCache->pass()
+#23 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/ReverseProxyMiddleware.php(48): Drupal\page_cache\StackMiddleware\PageCache->handle()
+#24 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php(51): Drupal\Core\StackMiddleware\ReverseProxyMiddleware->handle()
+#25 /home/yourbeau/public_html/drupal0/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Drupal\Core\StackMiddleware\NegotiationMiddleware->handle()
+#26 /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/DrupalKernel.php(708): Stack\StackedHttpKernel->handle()
+#27 /home/yourbeau/public_html/drupal0/index.php(19): Drupal\Core\DrupalKernel->handle()
+#28 {main}
+[15-Apr-2022 12:53:26 Africa/Cairo] Uncaught PHP Exception Drupal\Core\Database\IntegrityConstraintViolationException: "SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'link' cannot be null: INSERT INTO "dr2o_projects" ("name", "id", "task_type", "running", "occurences", "link", "file", "created_at") VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7); Array
+(
+    [:db_insert_placeholder_0] => PRJ_ABCDEF
+    [:db_insert_placeholder_1] => 318354
+    [:db_insert_placeholder_2] => countCharcters
+    [:db_insert_placeholder_3] => 
+    [:db_insert_placeholder_4] => 0
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 
+    [:db_insert_placeholder_7] => 2022-04-15 12:53:26
+)
+" at /home/yourbeau/public_html/drupal0/core/lib/Drupal/Core/Database/Driver/mysql/ExceptionHandler.php line 50

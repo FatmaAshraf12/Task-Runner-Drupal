@@ -24,11 +24,23 @@ class taskController extends ControllerBase {
    * @return string
    *   Return Table format data.
    */
+   
+   
+   
+    
   public function showProjectsPage() {
 
     $result = \Drupal::database()->query("SELECT * FROM `dr2o_projects` GROUP BY `name`");
 
     $rows = array();
+    
+    /** Replaced latest stauses with charcter insted of circlls and icons
+      * *  '+' : pass status
+      *     '-' : not yet
+      *     'x' : failed
+      * 
+     */
+    
     foreach ($result as $row => $content) {
         $strWords='' ; $strLines='' ; $strChar='';
         $countWordsTasks = \Drupal::database()->query("SELECT `running` FROM `dr2o_projects` WHERE `name` = '$content->name' AND `task_type` = 'countWords' ORDER BY `created_at` DESC LIMIT 5");
@@ -48,7 +60,7 @@ class taskController extends ControllerBase {
         }
         while(strlen($strLines) <5)      $strLines .= '-';
             
-        $countCharTasks = \Drupal::database()->query("SELECT `running` FROM `dr2o_projects` WHERE `name` = '$content->name' AND `task_type` = 'countChars' ORDER BY `created_at` DESC LIMIT 5");
+        $countCharTasks = \Drupal::database()->query("SELECT `running` FROM `dr2o_projects` WHERE `name` = '$content->name' AND `task_type` = 'countCharcters' ORDER BY `created_at` DESC LIMIT 5");
 
         foreach ($countCharTasks as $rr => $x) {    
             if($x->running =='Pass')         $strChar .= '+';
@@ -58,7 +70,7 @@ class taskController extends ControllerBase {
             
 
         $rows[] = array(
-            'data' => array( $content->name, 'Count Words' ,$strWords, $content->running ,  
+            'data' => array( $content->name, 'Count Words' ,$strWords, $content->running_status ,  
             new FormattableMarkup('<a href=":link">@name</a>', [':link' =>'/drupal0/projectPage/'.$content->name , '@name' => 'Project Page'])));
             
          $rows[] = array(

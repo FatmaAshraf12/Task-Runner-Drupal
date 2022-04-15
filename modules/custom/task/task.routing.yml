@@ -5,7 +5,8 @@ task.form:
    _form: '\Drupal\task\Form\TaskForm'
  requirements:
    _permission: 'access content'
-   
+   _auth: 'TRUE'
+
    
    
     
@@ -16,6 +17,7 @@ cool:
     _title: 'Projects'
   requirements:
     _permission: 'access content'
+    _auth: 'TRUE'
 
 
 
@@ -27,3 +29,4 @@ project:
     _title: 'Project Tasks'
   requirements:
     _permission: 'access content'
+    _auth: 'TRUE'

@@ -68,13 +68,15 @@ return new static(
     
     public function count_character($linkFile,$taskID){
         $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET started_at = CURRENT_TIMESTAMP WHERE id = $taskID");
-        $lineCount = file_get_contents('https://your-beauty.online/drupal0/sites/default/files/files/'.$linkFile);
+        $charCount = file_get_contents('https://your-beauty.online/drupal0/sites/default/files/files/'.$linkFile);
+        
+        $len = strlen($charCount);
 
-        if($wordCount>0){
-            $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET occurences = $lineCount , ended_at = CURRENT_TIMESTAMP , running = 'Pass' WHERE id = $taskID");
+        if(strlen($charCount)>0){
+            $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET occurences = $len , ended_at = CURRENT_TIMESTAMP , running = 'Pass' WHERE id = $taskID");
         }
         else{
-            $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET occurences = $lineCount , ended_at = CURRENT_TIMESTAMP , running = 'Fail' WHERE id = $taskID");
+            $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET occurences = $len , ended_at = CURRENT_TIMESTAMP , running = 'Fail' WHERE id = $taskID");
         }
     }
     
@@ -90,6 +92,9 @@ public function processItem($data) {
     $taskType = $data->taskType;
     $linkFile = $data->linkFile;
     
+    if($taskType){
+    $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET running_status = 'YES' WHERE name = $projectId");
+
     if($taskType == 'countWords')               
         $this->count_words($linkFile , $taskID);
     
@@ -98,6 +103,9 @@ public function processItem($data) {
     
     else if($taskType == 'countCharcters')      
         $this->count_character($linkFile , $taskID);
+    }
+    $result = \Drupal::database()->query("UPDATE `dr2o_projects` SET running_status = 'NO' WHERE name = $projectId");
+
 
 
 }

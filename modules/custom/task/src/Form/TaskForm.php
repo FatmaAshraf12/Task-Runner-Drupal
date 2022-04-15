@@ -54,6 +54,8 @@ class TaskForm extends FormBase {
         '#type' => 'managed_file',
         '#name' => 'inputFile',
         '#title' => t('File'),
+              '#required' => TRUE,
+
         '#upload_validators' => array(
             'file_validate_extensions' => array('txt')
             ),
